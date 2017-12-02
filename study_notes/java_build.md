@@ -19,3 +19,23 @@ jar {
     }
 }
 ```
+
+### Change directory layout
+```gradle
+apply plugin: 'java'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'source/java'
+        }
+    }
+
+    test {
+        java {
+            srcDirs ['source/test', 'source/integration']
+        }
+    }
+}
+```
+
